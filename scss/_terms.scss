@@ -1,0 +1,22 @@
+#terms{
+	&.wrap{
+		max-width: 828px;
+		padding: 0 75px 75px
+	}
+	.terms-sect {
+		margin-bottom: 40px;
+	}
+	h2{
+		font-size: 1.5em;
+		text-align: left;
+		font-weight: bold;
+	}
+}
+
+@media screen and (max-width:828px) {
+	#terms{
+		&.wrap{
+			padding: 10px 15px;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+#footer {
+    & {
+        background: #313131;
+        color: #fff;
+        font-size: $font-xs;
+        height: 40px;
+        line-height: 40px;
+        margin-top: -40px;
+    }
+    .mid {
+        width: 600px;
+        overflow: hidden;
+        @include center-block;
+        &-right{
+            float: right;
+        }
+    }
+    .copyright {
+        margin: 0 10px 0 0;
+        text-align: center;
+        float: left;
+    }
+    .language{
+        display: inline-block;
+        margin-left: 10px;
+    }
+    a {
+        color: #fff;
+    } 
+}
+
+//中文版語系多底線
+.zh{
+    .language{
+        a:last-child{
+            text-decoration: underline;
+        }
+    }
+}
+
+//英文版語系多底線
+.en{
+    .language{
+        a:first-child{
+            text-decoration: underline;
+        }
+    }
+}

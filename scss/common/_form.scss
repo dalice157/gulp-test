@@ -1,0 +1,222 @@
+/*
+ * form template 
+**/
+
+.fill-form {
+    .itms {
+        & {
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        &>dt {
+            float: left;
+            font-size: $font-l;
+            width: 55px;
+            line-height: 40px;
+            text-align: right;
+        }
+        &>dd {
+            margin-left: 70px;
+        }
+        p {
+            padding: 5px 0 0 0;
+            margin: 0;
+        }
+        .err-msg {
+            color: $red;
+        }
+        .tips-msg {
+            color: #666;
+        }
+        &.name #familyName {
+            float: left;
+            width: 33%;
+        }
+        &.name #firstName {
+            float: right;
+            width: 52%;
+        }
+        &.birth,
+        &.captcha,
+        &.password {
+            position: relative;
+        }
+        &.birth .icon-th {
+            background: url("../img/date_picker.png") no-repeat;
+        }
+        &.captcha {
+            #fillCaptcha{
+                float: left;
+                width: 45%;
+            }
+            .captcha-img-box{
+                float: right;
+                width: 42%;
+                border: solid 1px #ccc;
+                padding: 3px 6px;
+                .captcha-img{
+                    width: 100px;
+                    display: inline-block;
+                }
+                a{
+                    color:#9a9a9a;
+                }
+            }
+        }
+        &.password {
+            .icon-eye-open {
+                background: url("../img/captcha_reload.png") no-repeat;
+            }
+            .icon-eye-close {
+                background: url("../img/date_picker.png") no-repeat;
+            }
+        }
+        .add-on {
+            & {
+                position: absolute;
+                right: 6px;
+                top: 9px;
+                display: block;
+                width: 24px;
+                height: 24px;
+            }
+            i {
+                display: block;
+                height: 100%;
+            }
+        }
+    }
+    .errored {
+        .fill-text,
+        input {
+            background: #fff7f6;
+            border-color: $red;
+            color: $red;
+        }
+    }
+    .checkbox {
+        margin-bottom: 15px;
+        padding: 5px 0 0 8px;
+        cursor: pointer;
+        input[type=checkbox],
+        input[type=radio] {
+            margin-right: 5px;
+        }
+    }
+}
+
+/*
+ * input style 
+**/
+
+html input[disabled] {
+    color: #000000 !important;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+    display: none;
+}
+
+input[type=text]::-ms-reveal,
+input[type=text]::-ms-clear {
+    display: none;
+}
+
+.fill-text {
+    input:focus {
+        outline: none;
+    }
+    &.ng-dirty.ng-valid {
+        border: 1px solid $green;
+    }
+    &.ng-dirty.ng-invalid {
+        border: 1px solid #dc9696;
+    }
+}
+
+.fill-text,
+.fake-select {
+    display: block;
+    border: solid 1px #ccc;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: $font-m;
+    width: 93.5%;
+}
+
+.styled-select {
+    padding: 3px;
+}
+
+.fake-select {
+    & {
+        position: relative;
+        cursor: default;
+        background-color: #fff;
+    }
+    .opts {
+        display: block;
+        margin-right: 20px;
+        height: 1.52em;
+        line-height: 1.52em;
+        overflow: hidden;
+        &.placeholder {
+            color: #a9a9a9;
+        }
+    }
+}
+
+
+/*
+ * placeholder color
+**/
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #a9a9a9;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #a9a9a9;
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #a9a9a9;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #a9a9a9;
+}
+
+//英文版
+.en {
+    .fill-form {
+        .itms {
+            &>dt {
+                display: none;
+            }
+            &>dd {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    @media screen and (max-width: 620px) {
+        .fill-form {
+            .itms {
+                &>dd {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+@mixin position-middle($width, $height, $position) {
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+  margin-left: ($width)/2 * -1;
+  margin-top: ($height)/2 * -1;
+  position: $position;
+}
+
+@mixin min-height($height) {
+    min-height: $height;
+    height: auto !important;
+    height: $height;
+}
+
+@mixin one-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin inline-block {
+    display: inline-block;
+    vertical-align: middle;
+    *display: inline;
+    *zoom: 1;
+}
+@mixin center-block{
+	margin: 0 auto;
+}
+@mixin img-center {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+@mixin border-top {
+	border-top: 1px solid $border-color;
+}
+@mixin border-bottom($line-size:1px, $line-color:$border-color) {
+	border-bottom: $line-size solid $line-color;
+}
+@mixin break-word {
+    word-wrap: break-word;
+    word-break: break-all;
+}

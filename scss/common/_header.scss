@@ -1,0 +1,18 @@
+#header {
+    & {
+        overflow: hidden;
+        margin-bottom: 50px;
+    }
+    .logo {
+        display: block;      
+        background: #f9be00;
+        width: 70px;
+        height: 70px;
+        float: left;
+    } 
+    h1 {
+        font-size: $font-xl;
+        font-weight: normal;
+        margin: .8em 0 .8em 90px;
+    }
+}

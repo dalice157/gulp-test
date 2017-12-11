@@ -1,0 +1,125 @@
+#search {
+    &.result{
+        h2 {
+            padding: 0 0 20px 0;
+            margin: 0;
+            font-size: $font-xl;
+            text-align: left;
+            @include border-bottom;
+            span{
+                font-size: $font-m;
+                color:#666;
+                padding-left:10px;
+            }
+        }
+        .account-list {
+            margin-bottom: 10px;
+            text-align: left;
+            li {
+                padding: 10px 0;
+                overflow: hidden;
+                position: relative;
+                @include border-bottom;
+            }
+            p {
+                margin: 0;
+                line-height: 30px;
+            }
+            .appellation{
+                padding-left:10px;
+            }
+            .fa{
+                float: right;
+                padding-top: 6px;
+                color:#cdcdcd;
+                font-size: $font-l;
+                &.active{
+                    color:$green;
+                }
+            }
+        }
+        .input-birthday{
+            font-size: $font-l;
+            line-height: 30px;
+            margin-bottom: 1.3em;
+            display: block;
+            .fa{
+                margin-right: 10px;
+            }
+        }
+    }
+    .birth{
+        position: relative;
+        margin-bottom: 1.3em;
+        a{
+            position: absolute;
+            right:10px;
+            top:5px;
+            color:#9a9a9a;
+        }
+    }
+
+    .btns-group{
+        margin-bottom: 15px;
+    }
+    p{
+        text-align: left;
+        font-size: $font-l;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    #search {
+        &.result{
+            h2 {
+                padding-left: 0; 
+                margin-right: 0;
+            }
+            .account-list {
+                margin-right: 0;
+                li {
+                    padding-left: 0; 
+                }
+                .btn {
+                    width: 70px;
+                    margin-right: 0; 
+                }
+            }
+        }
+    }
+}
+//英文版
+.en {
+    #search {
+        .row-group {
+            margin-left: 43px;
+            width: 82%;
+        }
+        &.result {
+            h2, .account-list {
+                margin-right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 620px) {
+        #iforgot {
+            .row-group {
+                margin-left: 0;
+                width: 100%;
+            }
+            &.result {
+                .account-list {
+                    .btn {
+                        width: 100px;
+                    }
+                }
+            }
+            .text-block {
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
