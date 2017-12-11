@@ -1,3 +1,4 @@
+```
 /
 ├── css 打包後形成的
 │   └── app.css
@@ -24,3 +25,4 @@
         ├── ___mixins.scss
         ├── ___var.scss
         └── __init.scss
+```
