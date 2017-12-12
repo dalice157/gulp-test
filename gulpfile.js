@@ -1,6 +1,6 @@
 // 載入 gulp
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass'); // 載入 sass 編譯器
 var webserver = require('gulp-webserver');  // 載入 webserver
 
 // 定義名稱為 default 的 gulp 工作
