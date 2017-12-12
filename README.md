@@ -56,6 +56,8 @@ gulp.task('default', function () {
 執行 `gulp` 的話會運行 `default` 的任務，除非 `task` 有新增別的任務，且直接執行新增的任務，ex: `$ gulp scss`，否則都會執行 `default`。
 ```
 $ gulp
+
+// gulp 後的訊息
 [22:26:31] Using gulpfile ~/Users/dalice.chu/Desktop/gulp_test/gulpfile.js
 [22:26:31] Starting 'default'...
 Hi~Welcome~gulp!!
