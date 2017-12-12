@@ -41,6 +41,9 @@ $ npm install -g gulp
 #### 2. **如果有套用 Gulp 的專案需在專案下安裝 Gulp 套件**
 ```
 $ npm install --save-dev gulp
+
+//因為此專案有 package.json 所以輸入以下指令即可
+$ npm install
 ```
 #### 3. **在專案下的根目錄建立 `gulpfile.js`**
 安裝完後在根目錄下創建一個 `gulpfile.js`，之後只要在專案下執行 `gulp` 後，`gulp` 會直接讀取 `gulpfile.js` 檔案去運行。
@@ -53,7 +56,7 @@ gulp.task('default', function () {
     console.log('Hi~Welcome~gulp!!');
 });
 ```
-執行 `gulp` 的話會運行 `default` 的任務，除非 `task` 有新增別的任務，且直接執行新增的任務，ex: `gulp scss`，否則都會執行 `default` 這個任務。
+執行 `gulp` 的話會運行 **default** 的任務，除非 **task** 有新增別的任務，且直接執行新增的任務，ex: `gulp scss`，否則都會執行 **default** 這個任務。
 ```
 $ gulp
 
