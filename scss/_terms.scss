@@ -9,14 +9,14 @@
 	h2{
 		font-size: 1.5em;
 		text-align: left;
-		font-weight: bold;
+		font-weight: normal;
 	}
 }
 
 @media screen and (max-width:828px) {
 	#terms{
 		&.wrap{
-			padding: 10px 15px;
+			padding: 0 15px;
 		}
 	}
 }

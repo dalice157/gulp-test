@@ -16,11 +16,13 @@
         }
         label{
             display: block;
+            margin: 0;
         }
     }
     &.claim-ownership{
         h2{
             text-align: center;
+            padding:0;
         }
         .mail{
             display: block;

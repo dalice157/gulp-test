@@ -1,11 +1,13 @@
+# gulp 學習筆記
+## 路徑介紹
 ```
 /
-├── css 打包後形成的
+├── css                   # 打包後創建的資料夾
 │   └── app.css
-├── gulpfile.js 打包設定
+├── gulpfile.js           # gulp 腳本檔案
 ├── html
 │   └── unableLogin.html
-├── package.json 套件安裝
+├── package.json          # 套件管理
 └── scss
     ├── _common.scss
     ├── _iforgot.scss
@@ -26,3 +28,14 @@
         ├── ___var.scss
         └── __init.scss
 ```
+## 安裝說明
+### 安裝 gulp
+-（+*）如果先前沒有安裝 gulp 需先安裝
+```
+$ npm install -g gulp
+```
+-（+*）如果有套用 gulp 的專案需在專案下安裝 gulp 套件
+```
+$ npm install --save-dev gulp
+```
+-（+*）在專案下的根目錄建立 `gulpfile.js`

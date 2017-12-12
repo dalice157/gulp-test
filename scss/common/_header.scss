@@ -5,10 +5,14 @@
     }
     .logo {
         display: block;      
-        background: #f9be00;
+        background: #ff7800;
         width: 70px;
         height: 70px;
+        line-height: 70px;
+        text-align: center;
         float: left;
+        font-size: 30px;
+        color: #fff;
     } 
     h1 {
         font-size: $font-xl;
