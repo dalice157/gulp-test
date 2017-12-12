@@ -30,12 +30,12 @@
 ```
 ## 安裝說明
 ### 安裝 gulp
--（+*）如果先前沒有安裝 gulp 需先安裝
+1. 如果先前沒有安裝 gulp 需先安裝
 ```
 $ npm install -g gulp
 ```
--（+*）如果有套用 gulp 的專案需在專案下安裝 gulp 套件
+2. 如果有套用 gulp 的專案需在專案下安裝 gulp 套件
 ```
 $ npm install --save-dev gulp
 ```
--（+*）在專案下的根目錄建立 `gulpfile.js`
+3. 在專案下的根目錄建立 `gulpfile.js`
