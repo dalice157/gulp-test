@@ -93,7 +93,7 @@ Hi~Welcome~gulp!!
 1 .options.cwd
 2 .options.mode
 
-以下為API說明的範例：
+以下為API說明的範例：
 ```
 gulp.task('default', ['watch', 'scss', 'webserver']);
 
