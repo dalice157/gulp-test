@@ -87,13 +87,13 @@ Hi~Welcome~gulp!!
 3 .options.base
 
 ### gulp.dest(path[, options])
-+ **說明**： 處理完後輸出的文件路徑。（輸出的路徑會依 src）
++ **說明**： 處理完後輸出的文件路徑。（輸出的路徑會依 src）
 + **path**： 指定文件輸出路徑，或者定義函數返回文件輸出路徑亦可。（必填，所以不能為空）
 + **options**： 有2個參數cwd、mode。
 1 .options.cwd
 2 .options.mode
 
-以下為API說明的範例：
+以下為API說明的範例：
 ```
 gulp.task('default', ['watch', 'scss', 'webserver']);
 
