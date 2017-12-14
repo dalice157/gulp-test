@@ -93,7 +93,7 @@ Hi~Welcome~gulp!!
 > 1 .options.cwd
 > 2 .options.mode
 
-###### 以下為API說明的範例：
+##### 以下為API說明的範例：
 ```
 gulp.task('default', ['watch', 'scss', 'webserver']);
 
@@ -109,7 +109,7 @@ gulp.task('scss', function () {
 + **opts**： 因很少用，所以略過。
 + **tasks**： 放入需要執行的任務名稱陣列。（必填，所以不能為空）
 + **cb(event)**： 每個文件變化執行 callback function。
-###### 以下為 watch 範例：
+##### 以下為 watch 範例：
 ```
 gulp.task('watch', function () {
 	gulp.watch('scss/**/*.scss', ['scss']);
