@@ -103,3 +103,21 @@ gulp.task('scss', function () {
 	.pipe(gulp.dest('css'));
 });
 ```
+### gulp.watch(glob [, opts], tasks) or gulp.watch(glob [, opts, cb])
++ **說明**： 用來監聽文件，文件一修改就會執行指定任務
++ **glob**： 用來匹配文件路徑。（必填，所以不能為空）
++ **opts**： 因很少用，所以略過。
++ **tasks**： 放入需要執行的任務名稱陣列。（必填，所以不能為空）
++ **cb(event)**： 每個文件變化執行 callback function。
+以下為 watch 範例：
+```
+gulp.task('watch1', function () {
+    gulp.watch('less/**/*.less', ['testLess']);
+});
+ 
+gulp.task('watch2', function () {
+    gulp.watch('js/**/*.js', function (event) {
+        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+    });
+});
+```
