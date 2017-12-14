@@ -82,18 +82,18 @@ Hi~Welcome~gulp!!
 + **說明**： 創建的任務並告知要針對哪一個文件路徑。
 + **globs**： 用來匹配文件路徑，可以是一個文件路徑也可以將多個文件路徑組成陣列。（必填，所以不能為空）
 + **options**： 此參數很少應用到，但基本上它有三個參數可以選擇。
-1 .options.buffer
-2 .options.read
-3 .options.base
+> 1 .options.buffer
+> 2 .options.read
+> 3 .options.base
 
 ### gulp.dest(path[, options])
 + **說明**： 處理完後輸出的文件路徑。（輸出的路徑會依 src）
 + **path**： 指定文件輸出路徑，或者定義函數返回文件輸出路徑亦可。（必填，所以不能為空）
 + **options**： 有2個參數cwd、mode。
-1 .options.cwd
-2 .options.mode
+> 1 .options.cwd
+> 2 .options.mode
 
-以下為API說明的範例：
+###### 以下為API說明的範例：
 ```
 gulp.task('default', ['watch', 'scss', 'webserver']);
 
@@ -109,10 +109,10 @@ gulp.task('scss', function () {
 + **opts**： 因很少用，所以略過。
 + **tasks**： 放入需要執行的任務名稱陣列。（必填，所以不能為空）
 + **cb(event)**： 每個文件變化執行 callback function。
-以下為 watch 範例：
+###### 以下為 watch 範例：
 ```
-gulp.task('watch1', function () {
-    gulp.watch('less/**/*.less', ['testLess']);
+gulp.task('watch', function () {
+	gulp.watch('scss/**/*.scss', ['scss']);
 });
  
 gulp.task('watch2', function () {
