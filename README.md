@@ -108,7 +108,7 @@ gulp.task('scss', function () {
 + **glob**： 用來匹配文件路徑。（必填，所以不能為空）
 + **opts**： 因很少用，所以略過。
 + **tasks**： 放入需要執行的任務名稱陣列。（必填，所以不能為空）
-+ **cb(event)**： 每個文件變化執行 callback function。
++ **cb(event)**： 當每個文件變化時，執行 callback function。
 ##### 以下為 watch 範例：
 ```
 gulp.task('watch', function () {
