@@ -40,7 +40,7 @@
 $ npm install -g gulp
 ```
 #### 2. **如果有套用 Gulp 的專案需在專案下安裝 Gulp 套件**
-```
+```npm
 $ npm install --save-dev gulp
 
 //因為此專案有 package.json 所以輸入以下指令即可
@@ -57,11 +57,10 @@ var gulp = require('gulp');
 gulp.task('default', function () {
     console.log('Hi~Welcome~gulp!!');
 });
-
 ```
 #### 4. **執行第一個 Gulp**
 執行 `gulp` 的話會預設運行 **default** 的任務，除非 **task** 有新增別的任務，所以先執行預設即可。
-```javascript
+```
 $ gulp //執行 default
 
 // Gulp 後的訊息
