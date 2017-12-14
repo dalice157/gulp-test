@@ -2,10 +2,12 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');            // 載入 sass 編譯器
 var webserver = require('gulp-webserver');  // 載入 webserver
+var del = require('del');                   // 載入刪除指定文件
 
 // 定義名稱為 default 的 gulp 工作
-gulp.task('default', ['watch', 'scss', 'webserver']);
+gulp.task('default', ['clean', 'watch', 'webserver']);
 
+// scss 編譯
 gulp.task('scss', function () {
   return gulp.src('scss/**/*.scss')  // sass 的來源資料夾
 	.pipe(sass(                        // 編譯 sass
@@ -14,6 +16,12 @@ gulp.task('scss', function () {
 	)
 	.pipe(gulp.dest('css'));           // sass 編譯完成後的匯出資料夾
 });
+
+//刪除指定文件
+gulp.task('clean', function () {
+  return del(['css']);
+});
+
 
 // webserver
 gulp.task('webserver', function() {
@@ -28,6 +36,7 @@ gulp.task('webserver', function() {
   }, 1000);
 });
 
+//監聽 scss 編譯
 gulp.task('watch', function () {
 	gulp.watch('scss/**/*.scss', ['scss']);
 });

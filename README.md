@@ -31,6 +31,7 @@
 ## 使用套件
 + `gulp-sass` sass 編譯器
 + `gulp-webserver` 前端開發伺服器
++ `del` 刪除指定文件
 
 ## 安裝說明
 ### 安裝 Gulp
@@ -72,10 +73,27 @@ Hi~Welcome~gulp!!
 這現就可看到 gulp 運行的畫面了。
 ## Gulp API 說明
 ### gulp.task(name[, deps], fn)
-+ **說明**： 用在定義一個任務，一個 **task** 為一個任務。
++ **說明**： 創建一個任務，一個 **task** 為一個任務。
 + **name**： 任務名稱。（必填，所以不能為空）
 + **deps**： 將要依賴的任務全部都包在此。（被依賴的任務需要返回當前任務的事件流）
 + **fn**： 該任務調用的套件操作。
+
+### gulp.src(globs[, options])
++ **說明**： 創建的任務並告知要針對哪一個文件路徑。
++ **globs**： 用來匹配文件路徑，可以是一個文件路徑也可以將多個文件路徑組成陣列。（必填，所以不能為空）
++ **options**： 此參數很少應用到，但基本上它有三個參數可以選擇。
+1 .options.buffer
+2 .options.read
+3 .options.base
+
+### gulp.dest(path[, options])
++ **說明**： 處理完後輸出的文件路徑。（輸出的路徑會依 src）
++ **path**： 指定文件輸出路徑，或者定義函數返回文件輸出路徑亦可。（必填，所以不能為空）
++ **options**： 有2個參數cwd、mode。
+1 .options.cwd
+2 .options.mode
+
+以下為API說明的範例：
 ```
 gulp.task('default', ['watch', 'scss', 'webserver']);
 
@@ -85,9 +103,3 @@ gulp.task('scss', function () {
 	.pipe(gulp.dest('css'));
 });
 ```
-### gulp.src(globs[, options])
-+ **說明**： 指定要處理的**原始檔案**或**原始資料**路徑。
-+ **globs**： 需要處理的匹配路徑，可以是一個字符串也可以是字符串陣列。（必填，所以不能為空）
-> *：匹配所有文件 例：src/*.jpg（包含 src 以下的所有的 jpg）
-> *.*：匹配帶有副檔名的文件 例：src/*.*（包含 src 以下的所有有副檔名的文件）
-+ **options**： 
