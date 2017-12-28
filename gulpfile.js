@@ -10,10 +10,10 @@ gulp.task('default', ['clean', 'watch', 'webserver']);
 // scss 編譯
 gulp.task('scss', function () {
   return gulp.src('scss/**/*.scss')   // sass 的來源資料夾
-	.pipe(sass({                        // 編譯 sass
-		outputStyle: 'expanded'           // sass 的輸出格式
+  .pipe(sass({                        // 編譯 sass
+    outputStyle: 'expanded'           // sass 的輸出格式
   }).on('error', sass.logError))
-	.pipe(gulp.dest('css'));            // sass 編譯完成後的匯出資料夾
+  .pipe(gulp.dest('css'));            // sass 編譯完成後的匯出資料夾
 });
 
 //刪除指定文件
@@ -37,5 +37,5 @@ gulp.task('webserver', function() {
 
 //監聽 scss 編譯
 gulp.task('watch', function () {
-	gulp.watch('scss/**/*.scss', ['scss']);
+  gulp.watch('scss/**/*.scss', ['scss']);
 });
